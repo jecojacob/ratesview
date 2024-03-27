@@ -1,0 +1,27 @@
+﻿@inherits LayoutComponentBase
+
+
+
+<main>
+    <NavMenu />
+
+<div class="top-row px-4">
+    <SectionOutlet SectionName="top-row" />
+</div>
+<AuthorizeView>
+                <Authorized>
+                    <strong>Hi @context?.User?.Identity?.Name</strong>
+                    <form method="post" action="api/Account/Logout">
+                        <AntiForgeryTokenInput/>
+                        <button class="btn btn-link" type="submit">Sign out</button>
+                    </form>
+                </Authorized>
+                <NotAuthorized>
+                 <RatesNotAuthorised/>
+                </NotAuthorized>
+            </AuthorizeView>
+    <article class="content px-4">
+        @Body
+    </article>
+    <FluentDialogProvider />
+</main>

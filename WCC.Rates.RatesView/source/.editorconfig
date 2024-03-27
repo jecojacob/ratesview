@@ -1,0 +1,53 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+root = true
+
+[*]
+end_of_line = crlf
+indent_style = space
+
+# c style files
+[*.{cs,js,ts}]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+tab_width = 2
+indent_style = tab
+indent_size = tab
+
+
+# New line preferences
+end_of_line = crlf
+insert_final_newline = false
+
+
+# CA1034: Nested types should not be visible
+dotnet_diagnostic.CA1034.severity = none
+
+# sql type files
+[*.{sql,prc,tbl,trg,ix}]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+tab_width = 2
+indent_style = tab
+indent_size = tab
+
+
+# New line preferences
+end_of_line = crlf
+insert_final_newline = false
+
+# cloud formation template files
+[*.template]
+
+#### Core EditorConfig Options ####
+
+# Indentation and spacing
+indent_size = 4
+indent_style = space
+
+# New line preferences
+end_of_line = crlf
+insert_final_newline = false
